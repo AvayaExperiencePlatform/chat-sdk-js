@@ -8,8 +8,8 @@ Avaya Experience Platform™ Digital provides the Chat SDK which allows your cli
 
 
 ### Key Resources
-- [SDK API Reference](https://avayaexperienceplatform.github.io/chat-sdk-js)
-- [Digital Chat SDK Intro Guide](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-chat-sdk-intro)
+- [SDK API Reference](https://www.sdk.chat.docs.experience-platform.co)
+- [Chat SDK Introduction Guide](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-chat-sdk-intro)
 - [Chat SDK Provisioning Guide](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-chat-sdk-provisioning)
 - [Chat SDK Overview](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-javascript-sdk-overview)
   
