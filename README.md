@@ -15,7 +15,8 @@ Avaya Experience Platform™ Digital provides the Chat SDK which allows your cli
   
 ## Usage
 
-Before using the Chat SDK please ensure that the chat integration provisioning requirements are fulfilled. To use the Chat SDK you must provide the `integrationId` and a valid JWT Token during the [initialization](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-javascript-sdk-overview#initialization). Refer to [this page](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-chat-sdk-provisioning) on how to provision the chat integration, get the `integrationId` and generate a valid JWT Token.
+Before using the Chat SDK please ensure that the chat integration provisioning requirements are fulfilled. To use the Chat SDK you must provide the `integrationId`, a valid JWT Token and Application Key `appkey` during the [initialization](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-javascript-sdk-overview#initialization). Refer to [this page](https://developers.avayacloud.com/avaya-experience-platform/docs/digital-channel-chat-sdk-provisioning) on how to provision the chat integration, get the integrationId and appkey, and generate a valid JWT Token.
+
 
 The Chat SDK can imported in a webpage using the HTML `<script>` tag.
 
