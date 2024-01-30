@@ -1,18 +1,15 @@
 # Reference Client Website
-------------------------------------------------
 
 ## Dependencies
-------------------------------------------------
 
 1. Node js - `v20.9.0`
 2. `backend-web-app-server` (located /reference-applications/backend-web-app-server).
 
 ## Setup
-------------------------------------------------
 
 1. Make sure Node JS is installed.
 
-2. Make sure the `backend-web-app-server` is setup and running (refer to it's `README.txt`) file for details on how to do so.
+2. Make sure the `backend-web-app-server` is setup and running (refer to it's `README.md`) file for details on how to do so.
 
 3. Open a terminal in the directory of this file.
 
