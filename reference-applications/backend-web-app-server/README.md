@@ -1,37 +1,30 @@
 # Backend Web App Server Usage
-------------------------------------------------
 
 ## Requirements
-------------------------------------------------
 
 1. Node js - `v20.9.0`
 
 ## Setup
-------------------------------------------------
 
 1. Run `npm install`
 
 2. Make appropriate changes in `server.conf.json` file
 
 ## Start server
-------------------------------------------------
 
 To start server run `npm start`
 
 ### For starting server in HTTP
-------------------------------------------------
 
 For starting server in HTTP mode, make the `secure` flag false in `server.conf.json`.
 
 ### For starting server in HTTPS mode
-------------------------------------------------
 
 For starting server in HTTPS mode, make the `secure` flag true in `server.conf.json`.
 Make sure that the certificatePath and privateKeyPath point to the SSL certificate and its private key in `server.conf.json`.
 Also, make sure to provide the passphrase for the privateKey in `server.conf.json`.
 
 ## Configuration Reference
-------------------------------------------------
 
 All server configurations are present the `server.config.json` file.
 
@@ -70,17 +63,14 @@ Complete Example:
 ```
 
 ## REST API to get the JWT
-------------------------------------------------
 
 The backend-web-app-server exposes the REST API `/v1/getJWT`. The client can call this endpoint to get the JWT token for requested user.
 
 ### API Details
-----------------------------------------
 
 API Path: `/v1/getJWT`
 
 ### Request
-----------------------------------------
 
 Method: `POST`
 Content Type: `application/json`
@@ -105,7 +95,6 @@ Example of Request Body -
 ```
 
 ### Response
------------------------------------------
 
 The backend web app server returns JWT token and the Application Key (appkey) in response of the `/v1/getJWT` API.
 
