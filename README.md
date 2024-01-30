@@ -28,7 +28,7 @@ Please review the links provided above for a full guide on how to use the Avaya 
 
 ## License
 
-View [LICENSE](./LICENSE)
+View [LICENSE.md](./LICENSE.md)
 
 
 ## Changelog
