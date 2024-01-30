@@ -1,5 +1,5 @@
 
-# 1.0.53 (January 24th, 2024)
+# 0.1.53 (January 24th, 2024)
 
 - Extended the compatibility of the Chat SDK and the reference applications to include support for Node.js 20 (LTS).
 - Upgraded the dependent libraries of reference applications to improve performance and stability.
