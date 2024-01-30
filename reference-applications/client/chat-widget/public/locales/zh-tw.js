@@ -1,0 +1,114 @@
+var CHAT_CLIENT_LOCALS = {
+    "bubble":{
+        "open-chat-window-call-to-action":"按一下此處以開啟交談視窗",
+        "open-chat-window":"開啟交談視窗"
+    },
+    "app-bar":{
+        "customer-support":"客戶支援",
+        "minimize-the-chat-pop-up":"最小化交談快顯",
+        "close-the-chat-pop-up":"關閉交談快顯"
+    },
+    "chat-connectivity":{
+        "waiting-for-agent":"等待值機員",
+        "reconnecting":"正在重新連線...",
+        "chat-session-resumed":"交談工作階段已回復",
+        "close-due-to-inactivity":" 交談工作階段將因長時間處於閒置狀態而關閉",
+        "reconnection-failed":"重新連線失敗",
+        "connection-failed":"連線失敗",
+        "connected":"已連線",
+        "session-ended":"交談工作階段因長時間處於閒置狀態而終止",
+        "something-went-wrong":"發生錯誤",
+        "engagement-terminated":"交談結束"
+    },
+    "exit-dialog":{
+        "end-chat":"結束交談",
+        "end-the-conversation":"您將要結束對話。",
+        "cancel":"取消",
+        "something-went-wrong":"發生錯誤"
+    },
+    "notification-message":{
+        "joined-chat":"已加入交談。",
+        "left-chat":"已離開交談。",
+        "cancel":"取消"
+    },
+    "participant-message":{
+        "message-send-failed":"訊息無法傳送。\n 按一下以重新傳送。",
+        "sending-message":"正在傳送",
+        "message delivered":"訊息已傳送",
+        "message-failed":"失敗",
+        "delivered":"已傳送",
+        "time-format": "a hh:mm"
+    },
+    "show-participants":{
+        "list-is-open":"參與者清單開啟",
+        "list-is-closed":"清單關閉",
+        "show-list":"顯示參與者清單",
+        "you":"您",
+        "agent":"值機員",
+        "customer":"客戶",
+        "system":"系統",
+        "bot":"機器人",
+        "supervisor":"督導員",
+
+    },
+    "chat":{
+        "start-new-chat":"開始新交談",
+        "end-chat":"結束交談",
+        "reconnect":"重新連線",
+        "start-typing-your-message":"開始輸入您的訊息",
+        "type-something":"輸入內容...",
+        "open-emoji-icons":"開啟表情符號圖示",
+        "show-emojis-picker":"顯示表情符號選擇器",
+        "send-message":"傳送訊息",
+        "retrieving-history":"正在擷取歷程記錄",
+        "load-more":"載入更多"
+    },
+    "dialog":{
+        "last-message":"最後一則訊息",
+        "continue-this-chat":"繼續此交談",
+        "date-and-time":"日期與時間",
+        "continue-chat":"繼續此交談",
+        "start-new-chat":"開始新交談",
+        "error-creating-chat-session":"建立交談工作階段時發生錯誤",
+        "something-went-wrong":"發生錯誤",
+        "Error-joining-chat-session":"加入交談工作階段時發生錯誤",
+        "Session-is-terminated":"交談工作階段終止",
+        "date-format": "PPP eee a hh':'mm"
+    },
+    "dialogs":{
+        "start-new-chat":"開始新交談",
+        "error-creating-chat-session":"建立交談工作階段時發生錯誤",
+        "something-went-wrong":"發生錯誤",
+    },
+    "sign-in":{
+        "required-fields-followed-by":"必填欄位後接 *",
+        "first-name":"名字*",
+        "last-name":"姓氏*",
+        "email":"電子郵件地址*",
+        "first-name-holder":"名字",
+        "last-name-holder":"姓氏",
+        "email-holder":"電子郵件地址",
+        "start-chat":"開始交談",
+        "Avaya-Messaging":"Avaya 訊息",
+        "logo":"標誌",
+        "Please-try-again":"請重試",
+        "Error-creating-chat-session":"建立交談工作階段時發生錯誤",
+        "something-went-wrong":"發生錯誤",
+      
+    },
+    "context-parameter":{
+        "add-context-parameter":"新增隨路數據參數",
+        "value":"值：*",
+        "value-holder":"值",
+        "key":"機碼：*",
+        "key-holder":"機碼"
+    },
+    "validation":{
+        "first-name":"請提供您的名字",
+        "last-name":"請提供您的姓氏",
+        "email":"請輸入有效電子郵件地址",
+        "key":"請輸入有效機碼",
+        "value":"請輸入有效值",
+        "alphabets":"此欄位僅允許使用字母"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "search": "Keresés",
+  "search_no_results_1": "Jaj, ne!",
+  "search_no_results_2": "Ez az emoji nem található",
+  "pick": "Válasszon egy emojit…",
+  "add_custom": "Egyéni emoji hozzáadása",
+  "categories": {
+    "activity": "Tevékenység",
+    "custom": "Egyéni",
+    "flags": "Zászlók",
+    "foods": "Étel & Ital",
+    "frequent": "Gyakran használt",
+    "nature": "Állatok és természet",
+    "objects": "Tárgyak",
+    "people": "Smiley-k és emberek",
+    "places": "Utazás és helyek",
+    "search": "Keresés eredménye",
+    "symbols": "Szimbólumok"
+  },
+  "skins": {
+    "choose": "Alapértelmezett bőrtónus kiválasztása",
+    "1": "Alapértelmezett",
+    "2": "Világos",
+    "3": "Közepesen világos",
+    "4": "Közepes",
+    "5": "Közepesen sötét",
+    "6": "Sötét"
+  }
+}

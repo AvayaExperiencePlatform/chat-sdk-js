@@ -1,0 +1,15 @@
+{
+    "port" : 3000,
+    "realm" : "",
+    "labFQDN" : "",
+    "integrationId" : "",
+    "clientId" : "",
+    "clientSecret" : "",
+    "appkey": "",
+    "ttl": "30",
+    "secure": false, 
+    "certificatePath": "",
+    "privateKeyPath": "",
+    "passphrase": "",
+    "allowedOrigins": ["*"]
+}

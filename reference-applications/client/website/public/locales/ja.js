@@ -1,0 +1,114 @@
+var CHAT_CLIENT_LOCALS = {
+    "bubble":{
+        "open-chat-window-call-to-action":"ここをクリックするとチャットウィンドウが開きます",
+        "open-chat-window":"チャットウィンドウを開く"
+    },
+    "app-bar":{
+        "customer-support":"カスタマーサポート",
+        "minimize-the-chat-pop-up":"チャットポップアップの最小化",
+        "close-the-chat-pop-up":"チャットポップアップを閉じる"
+    },
+    "chat-connectivity":{
+        "waiting-for-agent":"エージェントの待機中",
+        "reconnecting":"再接続中...",
+        "chat-session-resumed":"チャットセッションが再開されました",
+        "close-due-to-inactivity":" 非アクティブ状態のためチャットセッションはまもなく終了します",
+        "reconnection-failed":"再接続できませんでした",
+        "connection-failed":"接続に失敗しました",
+        "connected":"接続済み",
+        "session-ended":"非アクティブ状態が続いたためチャットセッションが終了しました",
+        "something-went-wrong":"問題が発生しました",
+        "engagement-terminated":"チャットが終了しました"
+    },
+    "exit-dialog":{
+        "end-chat":"チャットの終了",
+        "end-the-conversation":"会話を終了しようとしています。",
+        "cancel":"キャンセル",
+        "something-went-wrong":"問題が発生しました"
+    },
+    "notification-message":{
+        "joined-chat":"がチャットに参加しました。",
+        "left-chat":"がチャットから退出しました。",
+        "cancel":"キャンセル"
+    },
+    "participant-message":{
+        "message-send-failed":"メッセージを送信できませんでした。\n クリックすると再送信します。",
+        "sending-message":"送信中...",
+        "message delivered":"メッセージが配信されました",
+        "message-failed":"失敗",
+        "delivered":"配信済み",
+        "time-format": "a hh:mm"
+    },
+    "show-participants":{
+        "list-is-open":"参加者リストが開いています",
+        "list-is-closed":"リストは閉じています",
+        "show-list":"参加者リストの表示",
+        "you":"あなた",
+        "agent":"エージェント",
+        "customer":"カスタマー",
+        "system":"システム",
+        "bot":"ボット",
+        "supervisor":"スーパーバイザ",
+
+    },
+    "chat":{
+        "start-new-chat":"新規チャットの開始",
+        "end-chat":"チャットの終了",
+        "reconnect":"再接続",
+        "start-typing-your-message":"メッセージの入力を開始",
+        "type-something":"入力してください...",
+        "open-emoji-icons":"絵文字アイコンを開く",
+        "show-emojis-picker":"絵文字ピッカーの表示",
+        "send-message":"メッセージの送信",
+        "retrieving-history":"履歴の取得中",
+        "load-more":"さらに読み込む"
+    },
+    "dialog":{
+        "last-message":"最後のメッセージ",
+        "continue-this-chat":"このチャットを続行",
+        "date-and-time":"日付と時間",
+        "continue-chat":"このチャットを続行",
+        "start-new-chat":"新規チャットの開始",
+        "error-creating-chat-session":"チャットセッション作成中のエラー",
+        "something-went-wrong":"問題が発生しました",
+        "Error-joining-chat-session":"チャットセッションへの参加中のエラー",
+        "Session-is-terminated":"チャットセッションが終了しました",
+        "date-format": "PPP eee a hh':'mm"
+    },
+    "dialogs":{
+        "start-new-chat":"新規チャットの開始",
+        "error-creating-chat-session":"チャットセッション作成中のエラー",
+        "something-went-wrong":"問題が発生しました",
+    },
+    "sign-in":{
+        "required-fields-followed-by":"必須フィールドの後には * が付いています",
+        "first-name":"名*",
+        "last-name":"姓*",
+        "email":"電子メールアドレス*",
+        "first-name-holder":"名",
+        "last-name-holder":"姓",
+        "email-holder":"電子メールアドレス",
+        "start-chat":"チャットの開始",
+        "Avaya-Messaging":"Avaya メッセージング",
+        "logo":"ロゴ",
+        "Please-try-again":"もう一度お試しください",
+        "Error-creating-chat-session":"チャットセッション作成中のエラー",
+        "something-went-wrong":"問題が発生しました",
+      
+    },
+    "context-parameter":{
+        "add-context-parameter":"コンテキストパラメータの追加",
+        "value":"値：*",
+        "value-holder":"値",
+        "key":"キー：*",
+        "key-holder":"キー"
+    },
+    "validation":{
+        "first-name":"名を入力してください",
+        "last-name":"姓を入力してください",
+        "email":"有効な電子メールアドレスを入力してください",
+        "key":"有効なキーを入力してください",
+        "value":"有効な値を入力してください",
+        "alphabets":"このフィールドにはアルファベットのみを使用できます"
+    }
+}

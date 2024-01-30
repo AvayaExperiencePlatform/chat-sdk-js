@@ -1,0 +1,29 @@
+{
+  "search": "검색",
+  "search_no_results_1": "죄송합니다.",
+  "search_no_results_2": "이모티콘을 찾을 수 없습니다.",
+  "pick": "이모티콘 선택...",
+  "add_custom": "사용자 지정 이모티콘 추가",
+  "categories": {
+    "activity": "활동",
+    "custom": "사용자 지정",
+    "flags": "깃발",
+    "foods": "음식 및 음료",
+    "frequent": "자주 사용됨",
+    "nature": "동물 및 자연",
+    "objects": "개체",
+    "people": "웃는 얼굴 및 사람",
+    "places": "여행 및 장소",
+    "search": "검색 결과",
+    "symbols": "기호"
+  },
+  "skins": {
+    "choose": "기본 피부색 선택",
+    "1": "기본",
+    "2": "밝음",
+    "3": "보통 밝음",
+    "4": "중간",
+    "5": "보통 어두움",
+    "6": "어두움"
+  }
+}

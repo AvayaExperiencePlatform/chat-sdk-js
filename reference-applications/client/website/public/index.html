@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App Client Demo</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./bootstrap.min.js" crossorigin="anonymous"></script>
+    <script defer src="./languageSwitcher.js"></script>
+    <script src="./main.js"></script> 
+    <script id="langScript" src="./locales/en.js"></script>
+
+    <script src="./avaya-ccaas-chat-sdk.js"></script>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *;img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *"> -->
+
+
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script> -->
+
+    <style>
+        html {
+            height: -webkit-fill-available;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            /* overflow: hidden; */
+            background-image: url("./assets/images/homepage.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            min-height: 100%;
+        }
+
+        nav.demo {
+            height: 70px;
+            background-color: var(--chat-client-primary);
+            color: #fff;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+            padding: 24px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav.demo span {
+            font-weight: bold;
+        }
+
+        section.demo {
+            height: calc(100% - 70px);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            padding: 30px;
+            color: #c00;
+            padding-top: 200px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+        }
+
+        section.demo h1 {
+            width: 50%;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        section.demo p {
+            line-height: 1.7;
+            color: #000;
+            width: 50%;
+        }
+
+
+        @media(max-width: 767px) {
+            body {
+                /* background-image: none !important; */
+            }
+
+            section.demo {
+
+                /* background-image: url("./images/homepage.png"); */
+                padding-top: 100px;
+                align-items: flex-start;
+            }
+
+            section.demo h1 {
+                width: 100%;
+            }
+
+            section.demo p {
+                color: #000;
+                width: 100%;
+            }
+
+        }
+
+        .sign-in-btn {
+            width: auto;
+            border-radius: 2px;
+            padding: 9px 33px;
+            display: inline-block;
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.5;
+            vertical-align: middle;
+            text-align: center;
+            border: none;
+            background: #fff;
+            cursor: pointer;
+            appearance: button;
+        }
+
+        .modal-header {
+            background-color: var(--chat-client-primary);
+            color: #fff;
+            display: block;
+        }
+
+        .modal-header h6 {
+            margin: 0;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .signinmodal-input {
+            margin-bottom: 1rem;
+        }
+
+        .modal-body button,
+        .modal-body button:hover {
+            width: 100%;
+            background-color: var(--chat-client-primary);
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+
+        .modal-content {
+            border: none;
+        }
+
+        .settings-btn {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            text-transform: capitalize;
+        }
+
+        .sign-out-dropdown {
+            display: none;
+        }
+
+        .sign-out-dropdown a.dropdown-toggle {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+<script defer src="chat-client.js"></script></head>
+
+<body>
+    <nav class="demo">
+        <span>Chat App</span>
+        <!-- <a href="google.com">google</a> -->
+        <div  style="display: none;">
+            <button class="settings-btn" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settingsModal">
+                <i class="fa fa-cog"></i> settings
+            </button>
+            <button class="sign-in-btn" id="showModalBtn" data-bs-toggle="modal" data-bs-target="#signInModal">
+                <span>Sign In</span>
+            </button>
+
+            <div class="dropdown sign-out-dropdown" id="sign-out-dropdown">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="SignInUserName"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="sign-out-btn" href="#">sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="demo">
+        <h1>Avaya Chat App</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit dolorem ipsam, ab magni
+            numquam? Aspernatur, culpa porro. Ipsum illo quod optio blanditiis perspiciatis corporis quas excepturi ad
+            magni odio.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, quis. Repellat, illum facilis eius
+            molestias eum id porro deleniti corrupti magni laudantium esse eos culpa blanditiis saepe quam est deserunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa suscipit quasi fugiat nesciunt ratione,
+            molestiae similique neque consequuntur eum quibusdam amet iusto repellendus sequi facere animi pariatur
+            quam! Harum!
+        </p>
+    </section>
+    <div id="root"></div>
+    <!-- Default Values
+        show-pre-chat="true"
+        participant-identity-type="participant-name" 
+        Participant-avatar-icon="participant-avatar.svg"
+        participants-avatar-bg-colors="#CC0000,#000000,#eeeeee"
+        text-color="#fff"
+    -->
+    <input type="hidden" name="chat_client_first_name" value="" />
+    <input type="hidden" name="chat_client_last_name" value="" />
+    <input type="hidden" name="chat_client_email" value="" />
+    <chat-app 
+       id="chat-app"
+        connector-url="https://<CCaaS Host FQDN>" 
+        jwt-server-url="<URL to fetch JWT>"
+        integration-id="<integrationId>" 
+        color="#D93D32" 
+        text-color="#fff"
+        logo-url="assets/icons/Avaya_Logo.svg" 
+        pre-chat-logo-url="assets/icons/Avaya_Logo.svg"
+        description="We’re here to talk, so ask us anything! Message us below or from your favorite app."
+        disclaimer="Lorem <b>Ipsum</b> is simply dummy <i>text</i> of the printing and typesetting <a target='_blank' href='https://google.com'>google</a>. Lorem Lorem <b>Ipsum</b> is simply dummy <i>text</i> of the printing and typesetting <a target='_blank' href='https://google.com'>google</a>. Lorem Lorem <b>Ipsum</b> is simply dummy <i>text</i> of the printing and typesetting. Lorem"
+        show-context-params="false" chat-header-text="Avaya Customer Support" show-chat-header="true"
+        show-pre-chat="true" participant-identity-type="participant-name" brand-name="Avaya"
+        participants-avatar-bg-colors="#D93D32,#0B3363,#000000,#A63B11" System-avatar-icon="assets/icons/avatar-bot.svg"
+        participant-avatar-icon="assets/icons/avatar-agent.svg" lang="en" direction="ltr" size="lg"
+        engagement-params='{"availableBalance":"1998"}' emoji-control-disabled="false"></chat-app>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Join Us</h5>
+                    <h6>Please type your name</h6>
+                </div>
+                <div class="modal-body">
+                    <form id="modalSignInForm">
+                        <input required name="modal_first_name" type="text" placeholder="first name"
+                            class="signinmodal-input form-control form-control-lg">
+                        <input required name="modal_last_name" type="text" placeholder="last name"
+                            class="signinmodal-input form-control form-control-lg">
+                        <input required name="modal_email_address" type="email" placeholder="email address"
+                            class="signinmodal-input form-control form-control-lg">
+                        <button type="submit" id="signInBtn" class="btn btn-primary btn-lg">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <form id="settingModalForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="labFQDN">CCass url</label>
+                                <input required id="labFQDN" name="labFQDN" type="text" placeholder="labFQDN"
+                                    class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="jwt-server-url">jwt-server-url</label>
+                                <input required id="jwt-server-url" name="jwt-server-url" type="text"
+                                    placeholder="jwt-server-url" class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="integrationId">integrationId</label>
+                                <input required id="integrationId" name="integrationId" type="text"
+                                    placeholder="integrationId" class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="realm">realm</label>
+                                <input required id="realm" name="realm" type="text" placeholder="realm"
+                                    class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ttl">ttl</label>
+                                <input required id="ttl" name="ttl" type="text" placeholder="ttl"
+                                    class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="clientId">clientId</label>
+                                <input required id="clientId" name="clientId" type="text" placeholder="clientId"
+                                    class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="clientSecret">clientSecret</label>
+                                <input required id="clientSecret" name="clientSecret" type="text"
+                                    placeholder="clientSecret" class="signinmodal-input form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="selectLang">select language</label>
+                                <select  id="selectLang" class="signinmodal-input form-control form-control-lg" aria-label="please select language">
+                                    <option value="en">en </option>
+                                    <!-- <option value="ar">ar</option> -->
+                                    <option value="es">es</option>
+                                    <option value="de">de</option>
+                                    <option value="fr">fr</option>
+                                    <option value="it">it</option>
+                                    <option value="he">he</option>
+                                    <option value="ja">ja</option>
+                                    <option value="ko">ko</option>
+                                    <option value="ru">ru</option>
+                                    <option value="pt_BR">pt_BR</option>
+                                    <option value="zh-cn">zh-cn</option>
+                                    <option value="hu">hu</option>
+                                    <option value="zh-tw">zh-tw</option>
+                                  </select>
+                            </div>
+
+                            
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="toggleApiExchangeHub" type="checkbox" value="" id="toggleApiExchangeHub">
+                                    <label class="form-check-label" for="toggleApiExchangeHub">
+                                      Use Application Key
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="appKey">Application Key</label>
+                                    <input id="appKey" name="appKey" type="text"
+                                        placeholder="Application Key" class="signinmodal-input form-control form-control-lg">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-primary">Save Settings</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

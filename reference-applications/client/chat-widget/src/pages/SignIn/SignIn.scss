@@ -1,0 +1,85 @@
+@import "../../assets/scss/variables";
+html[dir="rtl"] {
+  .sign-in {
+    form {
+      #email {
+        &::placeholder {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.sign-in {
+  direction: var(--chat-client-direction);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // button[type="submit"] {
+    //   height: 48px;
+    //   cursor: pointer;
+    //   background-color: var(--chat-client-primary);
+    //   display: block;
+    //   width: 100%;
+    //   border: 0;
+    //   outline: 0;
+    //   // padding: 12px;
+    //   color: #fff;
+    //   border-radius: 30px;
+    //   margin: 12px 0;
+    //   font-weight: 700;
+    //   font-family: "Noto Sans", sans-serif;
+    //   font-size: 18px;
+    // }
+
+    .engagement-params {
+      &-actions {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        .remove-param-btn {
+          button {
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .add-new-param {
+        color: #1473e6;
+        cursor: pointer;
+        display: block;
+        border: 0;
+        outline: 0;
+        background-color: unset;
+        font-weight: 400;
+        &:focus {
+          border-color: #86b7fe;
+          outline: 0;
+          box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+        }
+      }
+    }
+    .btn-danger {
+      &:focus {
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+      }
+    }
+  }
+}

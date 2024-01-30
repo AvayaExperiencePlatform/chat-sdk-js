@@ -1,0 +1,33 @@
+@import "../../assets/scss/variables";
+
+.app-bar {
+  height: 50px;
+  background-color: var(--chat-client-primary);
+  color: var(--chat-client-primary-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      display: inline-block;
+      margin-right: 6px;
+      font-size: 22px;
+      font-weight: 600;
+      font-family: "Noto Sans", sans-serif;
+    }
+  }
+
+  .actions-container {
+    button {
+      cursor: pointer;
+      color: #fff;
+      border: none;
+      outline: none;
+      background: none;
+    }
+  }
+}

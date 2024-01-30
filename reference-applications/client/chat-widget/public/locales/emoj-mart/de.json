@@ -1,0 +1,29 @@
+{
+  "search": "Suche",
+  "search_no_results_1": "Oh nein!",
+  "search_no_results_2": "Das Emoji konnte nicht gefunden werden",
+  "pick": "Wählen Sie ein Emoji...",
+  "add_custom": "Benutzerdefinierte Emojis hinzufügen",
+  "categories": {
+    "activity": "Aktivität",
+    "custom": "Benutzerdefiniert",
+    "flags": "Flaggen",
+    "foods": "Essen und Trinken",
+    "frequent": "Häufig verwendet",
+    "nature": "Tiere und Natur",
+    "objects": "Objekte",
+    "people": "Smileys und Menschen",
+    "places": "Reisen und Orte",
+    "search": "Suchergebnisse",
+    "symbols": "Symbole"
+  },
+  "skins": {
+    "choose": "Wählen Sie den Standard-Hautton",
+    "1": "Standard",
+    "2": "Hell",
+    "3": "Mittelhell",
+    "4": "Mittel",
+    "5": "Mitteldunkel",
+    "6": "Dunkel"
+  }
+}

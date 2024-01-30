@@ -1,0 +1,65 @@
+@import  '../../assets/scss/variables';
+
+.message{
+    padding: 0 12px;
+    margin: 10px 0;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    color: #000;
+   
+  
+    &-avatar{
+        width: 50px;
+        &-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--chat-client-grey-light);
+        }
+    }
+
+    &.is-customer{
+        position: relative;
+        flex-direction: row-reverse;
+
+        .message-body{
+            display: flex;
+            flex-direction: row-reverse;
+            padding-left: 45px;
+            padding-right: 10px;
+
+            &-container{
+                color: #fff;
+                background-color: var( --chat-client-grey-dark);
+            }
+
+        }
+
+
+    }
+    &-body{
+
+        padding-right: 45px;
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        width: calc(100% - 50px);
+        &-container{
+            display: inline-block;
+            background-color: var(--chat-client-grey-light);
+            padding: 12px;
+            border-radius: 12px;
+            a{
+                color: var(--chat-client-blue-light);
+            }
+            
+        }
+    }
+    
+    
+}
