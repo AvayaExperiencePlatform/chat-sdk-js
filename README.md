@@ -38,6 +38,7 @@ View [CHANGELOG.md](./CHANGELOG.md)
 ## Reference Application
 
 ### :warning: Disclaimer
-The reference applications are provided as a sample for the purpose of reference only and should NOT be used in production.
+
+    The reference applications are provided as a sample for the purpose of reference only and should NOT be used in production.
 
 To help you get started with integrating Chat into your Avaya Experience Platform™ tenant, a sample reference application is available under the [reference-applications/](./reference-applications) folder. Read the [README file](reference-applications/README.md)to know more.
