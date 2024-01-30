@@ -2,7 +2,9 @@
 
 Avaya Experience Platform™ Digital provides the Chat SDK which allows your client application to access the built-in chat capabilities. The Chat SDK is a JavaScript library that provides a collection of methods, objects and events using which you can easily build or integrate as a chat client for your websites and enable it with Avaya Experience Platform™ Digital Chat.
 
-    :warning: Installing, downloading, copying or using this SDK is subject to terms and conditions available in the LICENSE file
+### :warning: Disclaimer
+
+    Installing, downloading, copying or using this SDK is subject to terms and conditions available in the LICENSE file
 
 
 ### Key Resources
